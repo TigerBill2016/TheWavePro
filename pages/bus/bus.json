@@ -1,6 +1,7 @@
 {
     "navigationBarTitleText": "预约班车",
     "usingComponents": {
+        "van-toast": "/component/vant-weapp/dist/toast/index",
         "van-dialog": "/component/vant-weapp/dist/dialog/index",
         "van-cell": "/component/vant-weapp/dist/cell/index",
         "van-cell-group": "/component/vant-weapp/dist/cell-group/index",

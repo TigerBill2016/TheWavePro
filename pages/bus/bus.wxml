@@ -8,10 +8,12 @@
     <view class="time">
         <text class="info">班车时间</text>
         <view bindtap="selectTap2" class="select-group" style="display: {{destination==='market'?'block':'none'}};">
-            <view class="item {{time===item.time?'active':''}}" data-value="{{item.time}}" style="display: {{item.destination==='market'?'block':'none'}}" wx:for="{{runsData}}" wx:key="{{index}}">{{item.time}}</view>
+            <view class="item {{time===item.time?'active':''}} {{item.localHours - parseInt(item.time, 10) >= -1 ? 'disable':''}}" data-value="{{item.time}}" data-disable="{{ item.localHours - parseInt(item.time, 10) >= -1 }}" style="display: {{item.destination==='market'?'block':'none'}}"
+                wx:for="{{runsData}}" wx:key="{{index}}">{{item.time}}</view>
         </view>
         <view bindtap="selectTap2" class="select-group" style="display: {{destination==='villas'?'block':'none'}};">
-            <view class="item {{time===item.time?'active':''}}" data-value="{{item.time}}" style="display: {{item.destination==='villas'?'block':'none'}}" wx:for="{{runsData}}" wx:key="{{index}}">{{item.time}}</view>
+            <view class="item {{time===item.time?'active':''}} {{item.localHours - parseInt(item.time, 10) >= -1 ? 'disable':''}}" data-value="{{item.time}}" data-disable="{{ item.localHours - parseInt(item.time, 10) >= -1 }}" style="display: {{item.destination==='villas'?'block':'none'}}"
+                wx:for="{{runsData}}" wx:key="{{index}}">{{item.time}}</view>
         </view>
     </view>
     <view class="tips">不占座的小朋友，不计数哦</view>
@@ -22,8 +24,9 @@
     <button bindtap="onSubmit" class="submit" type="primary">我要预约</button>
     <van-dialog id="van-dialog"></van-dialog>
     <van-dialog useSlot bind:close="onModalClose" confirmButtonText="知道了" id="van-dialog1" show="{{issubscribe}}" title="已预定,可以【我的】中查看">
-            <view class="btn-area">
-                <button bindtap="onCancel" class="cancel" type="default">取消预约</button>
-            </view>
-        </van-dialog>
+        <view class="btn-area">
+            <button bindtap="onCancel" class="cancel" type="default">取消预约</button>
+        </view>
+    </van-dialog>
+    <van-toast id="van-toast" />
 </view>

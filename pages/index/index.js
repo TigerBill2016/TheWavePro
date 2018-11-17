@@ -48,13 +48,17 @@ Page({
       userInfo: n.globalData.userInfo,
       hasUserInfo: !0
     }) : this.data.canIUse ? n.userInfoReadyCallback = function (t) {
-      n.globalData.userInfo = t.userInfo, n.globalData.iv = t.iv, n.globalData.encryptedData = t.encryptedData,
-        e.setData({
-          userInfo: t.userInfo,
-          hasUserInfo: !0
-        });
+      console.log('userInfoReadyCallback', t)
+      n.globalData.userInfo = t.userInfo
+      wx.setStorageSync('iv', t.iv)
+      wx.setStorageSync('encryptedData', t.encryptedData)
+      e.setData({
+        userInfo: t.userInfo,
+        hasUserInfo: !0
+      });
     } : wx.getUserInfo({
       success: function (t) {
+        console.log('---------', t)
         n.globalData.userInfo = t.userInfo, e.setData({
           userInfo: t.userInfo,
           hasUserInfo: !0
@@ -67,11 +71,19 @@ Page({
     });
   },
   getUserInfo: function (e) {
-    console.log("222", e), n.globalData.userInfo = e.detail.userInfo, n.globalData.iv = e.detail.iv,
-      n.globalData.encryptedData = e.detail.encryptedData, this.setData({
-        userInfo: e.detail.userInfo,
-        hasUserInfo: !0
-      });
+    console.log("222", e)
+    let { errMsg } = e.detail
+    if (errMsg.indexOf('fail') >= 0) {
+      Toast('请允许获取头像昵称')
+      return
+    }
+    wx.setStorageSync('iv', e.detail.iv)
+    wx.setStorageSync('encryptedData', e.detail.encryptedData)
+    n.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: !0
+    });
   },
   getGuestField: function (a) {
     this.setData({
@@ -84,7 +96,9 @@ Page({
       number,
       person
     } = this.data.guestInfo
-    let { session_key, iv, encryptedData } = app.globalData
+    let session_key = wx.getStorageSync('session_key')
+    let iv = wx.getStorageSync('iv')
+    let encryptedData = wx.getStorageSync('encryptedData')
     if (session_key && iv && encryptedData) {
       if (username && number && person) {
         this.submitUserInfo({
@@ -104,7 +118,7 @@ Page({
         Toast('为了旅途的方便，请完善个人信息')
       }
     } else {
-      Toast('请再试一次')
+      Toast('请允许获取头像昵称')
     }
   },
   submitUserInfo: function (e) {

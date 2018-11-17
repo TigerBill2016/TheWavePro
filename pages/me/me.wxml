@@ -6,11 +6,19 @@
     <van-panel customClass="panel" title="预约早餐" wx:if="{{data.breakfast}}">
         <view class="main">{{data.breakfast.food}}: {{data.breakfast.time}}</view>
     </van-panel>
-    <van-panel customClass="panel" title="接送机" wx:if="{{data.transfer}}">
-        <view class="main">{{data.transfer.destination}}: {{data.transfer.flightNum}}</view>
+    <van-panel customClass="panel" title="接送机 {{data.transfer.destination === 'villas' ? '【去别墅】' : '【去机场】'}}" wx:if="{{data.transfer}}">
+        <view class="main">
+            航班号:{{data.transfer.flightNum}}
+            时间:{{data.transfer.time}}
+            备注:{{data.transfer.remark}}
+        </view>
     </van-panel>
-    <van-panel customClass="panel" title="预约班车" wx:if="{{data.bus}}">
-        <view class="main">{{data.bus.destination}}: {{data.bus.time}}</view>
+    <van-panel customClass="panel" title="预约班车 {{data.bus.destination === 'market' ? '【Central商场】':'【去别墅】'}}" wx:if="{{data.bus}}">
+        <view class="main">
+            时间:{{data.bus.time}}
+            人数:{{data.bus.member}}
+            价格:{{data.bus.price}}
+        </view>
     </van-panel>
     <view class="nodata" wx:if="{{!data.breakfast&&!data.transfer&&!data.bus}}">还没有预约哦</view>
 </view>
