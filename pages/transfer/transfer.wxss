@@ -1,0 +1,46 @@
+.wrap {
+    padding: 20rpx 20rpx 0;
+}
+
+.select-group .item {
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #efefef;
+}
+
+.select-group .item.active {
+    border-color: #008BC7;
+}
+
+.destination {
+    margin-bottom: 20px;
+}
+
+.destination .select-group .item {
+    display: block;
+    line-height: 50px;
+    margin-bottom: 8px;
+}
+
+.transferTime {
+    margin-bottom: 30px;
+}
+
+.transferTime .info {
+    font-size: 14px;
+    color: #000;
+}
+
+.transferTime .textInput {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 10px;
+    border: 2px solid #efefef;
+}
+
+.wrap .submit {
+    background-color: #008BC7;
+    border-radius: 2px;
+}

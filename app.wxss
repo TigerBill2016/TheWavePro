@@ -1,0 +1,33 @@
+[is="component/dist/goods-action-button/index"] {
+    flex: 1;
+}
+
+[is="component/dist/tabbar-item/index"] {
+    flex: 1;
+}
+
+[is="component/vant-weapp/dist/goods-action-button/index"] {
+    flex: 1;
+}
+
+[is="component/vant-weapp/dist/tabbar-item/index"] {
+    flex: 1;
+}
+
+@import "__wuBaseWxss__/2.wxss";
+
+page {
+    color: #333;
+    font-size: 16px;
+    background: #f8f8f8;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 0 0 100rpx;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'PingFang SC',Helvetica,'STHeiti STXihei','Microsoft YaHei',Tohoma,Arial,sans-serif;
+}
+
+.container {
+    height: 100%;
+    box-sizing: border-box;
+}

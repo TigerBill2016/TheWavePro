@@ -1,0 +1,21 @@
+.wrap {
+    padding: 20rpx 20rpx 0;
+}
+
+.h1 {
+    display: block;
+    font-size: 50rpx;
+    margin: 20px 0;
+}
+
+.h2 {
+    display: block;
+    font-size: 40rpx;
+    margin: 18px 0;
+}
+
+.p {
+    display: block;
+    font-size: 32rpx;
+    margin: 10px 0;
+}

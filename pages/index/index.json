@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "van-toast": "/component/vant-weapp/dist/toast/index",
+        "van-field": "/component/vant-weapp/dist/field/index",
+        "van-cell-group": "/component/vant-weapp/dist/cell-group/index",
+        "van-popup": "/component/vant-weapp/dist/popup/index",
+        "bottombar": "/component/bottombar/bottombar",
+        "van-notice-bar": "/component/vant-weapp/dist/notice-bar/index",
+        "van-button": "/component/vant-weapp/dist/button/index"
+    }
+}

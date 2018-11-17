@@ -1,0 +1,39 @@
+<view class="container">
+  <van-notice-bar class="notice" text="当天下午五点前订第二天的早餐"></van-notice-bar>
+  <image class="logo" mode="aspectFit" src="../../public/logo.png"></image>
+  <view class="section">
+    <navigator class="item" url="/pages/breakfast/breakfast">
+      <icon class="iconfont icon-zaocan"></icon>
+      <text class="text">预订早餐</text>
+    </navigator>
+    <navigator class="item" url="/pages/transfer/transfer">
+      <icon class="iconfont icon-feijilef"></icon>
+      <text class="text">接送机</text>
+    </navigator>
+    <navigator class="item" url="/pages/bus/bus">
+      <icon class="iconfont icon-banche-"></icon>
+      <text class="text">预约班车</text>
+    </navigator>
+    <navigator class="item" url="/pages/takeOutFood/takeOutFood">
+      <icon class="iconfont icon-waimai"></icon>
+      <text class="text">点外卖</text>
+    </navigator>
+  </view>
+  <van-popup bind:close="onClose" customClass="pop-left" overlay="{{false}}" position="left" show="{{show}}">
+    <view class="userinfo">
+      <button bindgetuserinfo="getUserInfo" openType="getUserInfo" wx:if="{{!hasUserInfo&&canIUse}}"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" mode="cover" src="{{userInfo.avatarUrl}}"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class="block-msg">为了旅途方便，需要您完善个人信息</view>
+    <van-cell-group customClass="form-group">
+      <van-field clearable required bind:change="getGuestField" data-name="username" label="真实姓名" placeholder="请输入真实姓名" value="{{guestInfo.username}}"></van-field>
+      <van-field required bind:change="getGuestField" data-name="number" label="别墅编号" placeholder="请输入别墅编号" value="{{guestInfo.number}}"></van-field>
+      <van-field clearable required bind:change="getGuestField" border="{{false}}" data-name="person" label="入住人数" placeholder="请输入入住人数" type="number" value="{{guestInfo.person}}"></van-field>
+    </van-cell-group>
+    <van-button block bind:click="getGuestInfo" customClass="submit" type="primary">确定</van-button>
+  </van-popup>
+  <van-toast id="van-toast"></van-toast>
+</view>

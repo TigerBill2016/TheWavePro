@@ -1,0 +1,24 @@
+<view class="wrap">
+    <view class="groups">
+        <view bindtap="selectTap1" class="select-group">
+            <view class="{{destination==='market'?'item active':'item'}}" data-value="market">Central商场</view>
+            <view class="{{destination==='villas'?'item active':'item'}}" data-value="villas">去别墅</view>
+        </view>
+    </view>
+    <view class="time">
+        <text class="info">班车时间</text>
+        <view bindtap="selectTap2" class="select-group" style="display: {{destination==='market'?'block':'none'}};">
+            <view class="item {{time===item.time?'active':''}}" data-value="{{item.time}}" style="display: {{item.destination==='market'?'block':'none'}}" wx:for="{{runsData}}" wx:key="{{index}}">{{item.time}}</view>
+        </view>
+        <view bindtap="selectTap2" class="select-group" style="display: {{destination==='villas'?'block':'none'}};">
+            <view class="item {{time===item.time?'active':''}}" data-value="{{item.time}}" style="display: {{item.destination==='villas'?'block':'none'}}" wx:for="{{runsData}}" wx:key="{{index}}">{{item.time}}</view>
+        </view>
+    </view>
+    <view class="tips">不占座的小朋友，不计数哦</view>
+    <van-cell-group class="">
+        <van-field bindinput="onChange" border="{{true}}" label="乘车人数" placeholder="请输入乘车人数" type="number" value="{{member}}"></van-field>
+        <van-cell border="{{false}}" title="价格" value="{{price}} 泰铢"></van-cell>
+    </van-cell-group>
+    <button bindtap="onSubmit" class="submit" type="primary">我要预约</button>
+    <van-dialog id="van-dialog"></van-dialog>
+</view>

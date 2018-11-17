@@ -1,0 +1,5 @@
+<view class="wrap">
+    <text class="info">推荐岛上的一家美食店(复制地址浏览器中打开即可)</text>
+    <text class="url" selectable="true">https://www.hangoversamui.com/</text>
+    <web-view src="https://www.hangoversamui.com/"></web-view>
+</view>

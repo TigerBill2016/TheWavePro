@@ -1,0 +1,3 @@
+<van-button square bind:click="onClick" disabled="{{disabled}}" loading="{{loading}}" size="large" type="{{type}}">
+  {{text}}
+</van-button>

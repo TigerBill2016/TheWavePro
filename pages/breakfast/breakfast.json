@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "预订早餐",
+    "usingComponents": {
+        "van-toast": "/component/vant-weapp/dist/toast/index",
+        "van-dialog": "/component/vant-weapp/dist/dialog/index",
+        "van-radio": "/component/vant-weapp/dist/radio/index",
+        "van-radio-group": "/component/vant-weapp/dist/radio-group/index"
+    }
+}

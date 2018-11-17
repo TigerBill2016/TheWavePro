@@ -1,0 +1,14 @@
+<view class="bar">
+    <view class="item">
+        <icon class="iconfont icon-shouye"></icon>
+        <text class="text">首页</text>
+    </view>
+    <view class="item">
+        <icon class="iconfont icon-zhinan"></icon>
+        <text class="text">别墅指南</text>
+    </view>
+    <view class="item">
+        <icon class="iconfont icon-wode1"></icon>
+        <text class="text">我的</text>
+    </view>
+</view>

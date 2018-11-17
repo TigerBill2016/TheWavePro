@@ -1,0 +1,19 @@
+<view>
+    <van-notice-bar text="泰国国内航班建议您提前2小时出发,国际航班建议提前2个半小时出发,别墅到机场车程大约20分钟。"></van-notice-bar>
+    <view class="wrap">
+        <view class="destination">
+            <view bindtap="selectTap" class="select-group">
+                <view class="item {{destination==='villas'?'active':''}}" data-value="villas">机场 ---- 别墅</view>
+                <view class="item {{destination==='airport'?'active':''}}" data-value="airport">别墅 ---- 机场</view>
+            </view>
+        </view>
+        <van-cell-group>
+            <van-field clearable required bind:change="getTime" label="接送机时间" placeholder="请输入接送机时间" value="{{time}}"></van-field>
+            <van-field required bind:change="getFlightNum" label="航班" placeholder="请输入航班" value="{{flightNum}}"></van-field>
+            <van-field bind:change="getRemark" border="{{false}}" label="备注" placeholder="请输入备注" type="textarea" value="{{remark}}"></van-field>
+        </van-cell-group>
+        <button bindtap="onSubmit" class="submit" formType="submit" type="primary">立即预约</button>
+        <van-dialog id="van-dialog"></van-dialog>
+        <van-toast id="van-toast"></van-toast>
+    </view>
+</view>

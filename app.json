@@ -1,0 +1,46 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/breakfast/breakfast",
+        "pages/transfer/transfer",
+        "pages/bus/bus",
+        "pages/takeOutFood/takeOutFood",
+        "pages/guide/guide",
+        "pages/me/me",
+        "pages/guidehome/guidehome",
+        "pages/guide-en/guide-en",
+        "pages/guide-cn/guide-cn"
+    ],
+    "window": {
+        "backgroundTextStyle": "black",
+        "navigationBarBackgroundColor": "#008BC7",
+        "navigationBarTitleText": "The Wave",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#009BDE",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "public/index1.png",
+                "selectedIconPath": "public/index2.png"
+            },
+            {
+                "pagePath": "pages/guidehome/guidehome",
+                "text": "别墅指南",
+                "iconPath": "public/guide1.png",
+                "selectedIconPath": "public/guide2.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我的",
+                "iconPath": "public/me1.png",
+                "selectedIconPath": "public/me2.png"
+            }
+        ]
+    }
+}

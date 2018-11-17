@@ -1,0 +1,5 @@
+<view bind:tap="onClick" class="van-switch custom-class {{checked?'van-switch--on':''}} {{disabled?'van-switch--disabled':''}}" style="font-size: {{size}};">
+    <view class="van-switch__node node-class">
+        <van-loading customClass="van-switch__loading" size="50%" wx:if="{{loading}}"></van-loading>
+    </view>
+</view>

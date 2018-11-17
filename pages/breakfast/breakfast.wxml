@@ -1,0 +1,27 @@
+<view>
+    <image class="cover" mode="cover" src="{{food==='中餐'?'../../public/cn-food.jpg':'../../public/en-food.jpg'}}"></image>
+    <view class="wrap">
+        <view class="food">
+            <view bindtap="selectTap1" class="select-group">
+                <view class="{{food==='中餐'?'item active':'item'}}" data-value="中餐">中餐</view>
+                <view class="{{food==='西餐'?'item active':'item'}}" data-value="西餐">西餐</view>
+            </view>
+        </view>
+        <view class="time">
+            <text class="info">用餐时间</text>
+            <view bindtap="selectTap2" class="select-group">
+                <view class="item {{preTime===item.code?'active':''}} {{item.count===0?'disable':''}}" data-disable="{{item.count<=0?true:false}}" data-value="{{item.code}}" wx:for="{{timeData}}" wx:key="{{item.code}}">
+          {{item.time}} {{item.count<=0?'(已约满)':''}}
+        </view>
+            </view>
+        </view>
+        <button bindtap="onSubmit" class="submit" type="primary" wx:if="{{!issubscribe}}">立即预约</button>
+        <van-toast id="van-toast"></van-toast>
+        <van-dialog bind:close="onModalClose" id="van-dialog" message="成功预定明天早餐" show="{{show}}"></van-dialog>
+        <van-dialog useSlot bind:close="onModalClose" confirmButtonText="知道了" id="van-dialog1" show="{{issubscribe}}" title="已预定明天的早餐">
+            <view class="btn-area">
+                <button bindtap="onCancel" class="cancel" type="default">取消预约</button>
+            </view>
+        </van-dialog>
+    </view>
+</view>

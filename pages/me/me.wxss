@@ -1,0 +1,30 @@
+.panel {
+    background-color: #fff;
+    margin-bottom: 8px;
+}
+
+.userinfo {
+    display: flex;
+    padding: 20rpx;
+}
+
+.userinfo .avatar {
+    display: block;
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.userinfo .nickname {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.main {
+    padding: 10px 15px;
+}
+
+.nodata {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+}

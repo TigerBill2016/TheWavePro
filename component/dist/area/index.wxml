@@ -1,0 +1,15 @@
+<view class="van-picker">
+    <view class="van-picker__toolbar van-hairline--bottom">
+        <view bindtap="onCancel" class="van-picker__cancel">取消</view>
+        <view class="van-picker__title">{{title}}</view>
+        <view bindtap="onConfirm" class="van-picker__confirm">确定</view>
+    </view>
+    <view class="van-picker__loading" wx:if="{{loading}}">
+        <van-loading color="#38f"></van-loading>
+    </view>
+    <picker-view bindchange="onChange" class="van-picker__columns" indicatorStyle="height: {{itemHeight}}px;" style="width: 100%; height: {{itemHeight*visibleItemCount+'px'}}" value="{{pickerValue}}">
+        <picker-view-column class="van-picker-column" wx:for="{{displayColumns}}" wx:for-index="rowIndex" wx:for-item="row" wx:key="rowIndex">
+            <view class="van-picker-column__item {{index===pickerValue[rowIndex]?'van-picker-column__item--selected':''}}" style="line-height: {{itemHeight}}px;" wx:for="{{row}}" wx:key="{{ item.code }}">{{item.name}}</view>
+        </picker-view-column>
+    </picker-view>
+</view>

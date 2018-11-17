@@ -1,0 +1,16 @@
+<view class="wrap">
+    <view class="userinfo panel">
+        <image class="avatar" mode="cover" src="{{userInfo.avatarUrl}}"></image>
+        <text class="nickname">{{userInfo.nickName}},欢迎来到苏梅岛！！！</text>
+    </view>
+    <van-panel customClass="panel" title="预约早餐" wx:if="{{data.breakfast}}">
+        <view class="main">{{data.breakfast.food}}: {{data.breakfast.time}}</view>
+    </van-panel>
+    <van-panel customClass="panel" title="接送机" wx:if="{{data.transfer}}">
+        <view class="main">{{data.transfer.destination}}: {{data.transfer.flightNum}}</view>
+    </van-panel>
+    <van-panel customClass="panel" title="预约班车" wx:if="{{data.bus}}">
+        <view class="main">{{data.bus.destination}}: {{data.bus.time}}</view>
+    </van-panel>
+    <view class="nodata" wx:if="{{!data.breakfast&&!data.transfer&&!data.bus}}">还没有预约哦</view>
+</view>

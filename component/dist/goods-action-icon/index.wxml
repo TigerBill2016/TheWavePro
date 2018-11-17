@@ -1,0 +1,6 @@
+<van-button bind:tap="onClick" customClass="van-goods-action-icon" size="large">
+    <view class="van-goods-action-icon__content van-hairline--right">
+        <van-icon class="van-goods-action-icon__icon" info="{{info}}" name="{{icon}}" size="20px"></van-icon>
+    {{text}}
+  </view>
+</van-button>
