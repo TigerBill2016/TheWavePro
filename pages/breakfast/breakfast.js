@@ -5,6 +5,7 @@ function t(t) {
 }
 
 var e = t(require("../../component/vant-weapp/dist/toast/toast")), a = t(require("../../component/vant-weapp/dist/dialog/dialog")), s = require("../../app.config.js"), i = getApp();
+import Dialog from '../../component/vant-weapp/dist/dialog/dialog'
 
 Page({
     data: {
@@ -23,16 +24,16 @@ Page({
             success: function(e) {
                 if (200 === e.statusCode) {
                     var s = new Date(e.data).getHours();
-                    if (s >= 19 || s < 9) return void a.default.alert({
-                        title: "只能下午五点之前预约早餐"
-                    }).then(function() {
-                        console.log("==================");
-                    });
+                    // if (s >= 19 || s < 9) {
+                    //     Dialog.alert({
+                    //         title: '只能下午五点之前预约早餐'
+                    //     })
+                    //     return
+                    // }
                     t.fetInitData(), t.fetchSubscribe();
                 }
             }
         }), this.setData({
-            timeData: i.globalData.breakfastData,
             guestid: wx.getStorageSync("guestid")
         });
     },

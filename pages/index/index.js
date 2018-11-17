@@ -35,7 +35,7 @@ Page({
     guestInfo: {},
     hasUserInfo: !1,
     canIUse: wx.canIUse("button.open-type.getUserInfo"),
-    show: !0
+    show: true
   },
   bindViewTap: function () {
     wx.navigateTo({
@@ -79,29 +79,26 @@ Page({
     });
   },
   getGuestInfo: function () {
-    // var e = this.data.guestInfo,
-    //   s = n.globalData,
-    //   o = s.session_key,
-    //   r = s.iv,
-    //   u = s.encryptedData;
     let {
       username,
       number,
       person
     } = this.data.guestInfo
     let { session_key, iv, encryptedData } = app.globalData
-
     if (session_key && iv && encryptedData) {
       if (username && number && person) {
         this.submitUserInfo({
           session_key,
           iv,
           encryptedData,
-          ...guestInfo,
+          ...this.data.guestInfo,
         })
         wx.setStorage({
           key: 'guestInfo',
           data: this.data.guestInfo,
+        })
+        this.setData({
+          show: false
         })
       } else {
         Toast('为了旅途的方便，请完善个人信息')
@@ -109,17 +106,6 @@ Page({
     } else {
       Toast('请再试一次')
     }
-
-    // e.username && e.number && e.person ? o && r && u ? (this.submitUserInfo(t({
-    //   session_key: o,
-    //   iv: r,
-    //   encryptedData: u
-    // }, e)), this.setData({
-    //   show: !1
-    // }), wx.setStorage({
-    //   key: "guestInfo",
-    //   data: e
-    // })) : (0, a.default)("") : (0, a.default)("为了旅途的方便，请完善个人信息");
   },
   submitUserInfo: function (e) {
     wx.request({

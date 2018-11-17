@@ -15,5 +15,10 @@
         <button bindtap="onSubmit" class="submit" formType="submit" type="primary">立即预约</button>
         <van-dialog id="van-dialog"></van-dialog>
         <van-toast id="van-toast"></van-toast>
+        <van-dialog useSlot bind:close="onModalClose" confirmButtonText="知道了" id="van-dialog1" show="{{issubscribe}}" title="已预约,可以【我的】中查看">
+            <view class="btn-area">
+                <button bindtap="onCancel" class="cancel" type="default">取消预约</button>
+            </view>
+        </van-dialog>
     </view>
 </view>

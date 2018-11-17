@@ -17,8 +17,8 @@
         </view>
         <button bindtap="onSubmit" class="submit" type="primary" wx:if="{{!issubscribe}}">立即预约</button>
         <van-toast id="van-toast"></van-toast>
-        <van-dialog bind:close="onModalClose" id="van-dialog" message="成功预定明天早餐" show="{{show}}"></van-dialog>
-        <van-dialog useSlot bind:close="onModalClose" confirmButtonText="知道了" id="van-dialog1" show="{{issubscribe}}" title="已预定明天的早餐">
+        <van-dialog bind:close="onModalClose" id="van-dialog" message="预约成功,可以【我的】中查看" show="{{show}}"></van-dialog>
+        <van-dialog useSlot bind:close="onModalClose" confirmButtonText="知道了" id="van-dialog1" show="{{issubscribe}}" title="已预定,可以【我的】中查看">
             <view class="btn-area">
                 <button bindtap="onCancel" class="cancel" type="default">取消预约</button>
             </view>
