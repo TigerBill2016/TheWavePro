@@ -1,0 +1,5 @@
+/* pages/personal/personal.wxss */
+
+.container {
+  padding-top: 20rpx;
+}
