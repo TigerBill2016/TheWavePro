@@ -63,3 +63,12 @@
   border-radius: 2px;
   margin-top: 10px;
 }
+
+.tips {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  padding: 4px 0;
+  color: #ed6a0c;
+  background-color: #fffbe8;
+}

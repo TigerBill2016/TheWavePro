@@ -15,6 +15,7 @@
           <=0? '(已约满)': ''}} </view>
         </view>
       </view>
+      <view class="tips">{{price}}泰铢/人，总价{{price*person}}泰铢</view>
       <button bindtap="onSubmit" class="submit" type="primary" wx:if="{{!issubscribe}}">立即预约</button>
       <van-toast id="van-toast"></van-toast>
       <van-dialog bind:close="onModalClose" id="van-dialog" message="预约成功,可以【我的】中查看" show="{{show}}"></van-dialog>

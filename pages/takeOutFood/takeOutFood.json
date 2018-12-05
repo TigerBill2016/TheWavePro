@@ -1,3 +1,6 @@
 {
-    "navigationBarTitleText": "点外卖"
+  "navigationBarTitleText": "点外卖",
+  "usingComponents": {
+    "van-button": "/component/vant-weapp/dist/button/index"
+  }
 }

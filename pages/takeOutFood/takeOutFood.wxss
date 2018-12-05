@@ -1,13 +1,45 @@
 .wrap {
-    padding: 20rpx;
 }
 
 .info {
-    font-size: 28rpx;
+  display: block;
+  font-size: 32rpx;
+  color: #ed6a0c;
+  background-color: #fffbe8;
+  padding: 6px;
+  margin-bottom: 5px;
 }
 
 .url {
-    display: block;
-    font-size: 36rpx;
-    color: #008bc7;
+  display: block;
+  font-size: 36rpx;
+  color: #008bc7;
+}
+
+.panel {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.panel .img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.panel .img image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel .content {
+  flex: 1;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.panel .content .btn {
+  margin-top: 8px;
+  float: right;
 }

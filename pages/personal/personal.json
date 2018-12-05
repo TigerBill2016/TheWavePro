@@ -2,6 +2,7 @@
   "navigationBarTitleText": "个人信息",
   "backgroundColor": "#000000",
   "usingComponents": {
+    "van-popup": "/component/vant-weapp/dist/popup/index",
     "van-cell": "/component/vant-weapp/dist/cell/index",
     "van-datetime-picker": "/component/vant-weapp/dist/datetime-picker/index",
     "van-toast": "/component/vant-weapp/dist/toast/index",

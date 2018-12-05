@@ -2,6 +2,9 @@
   <navigator class="userinfo panel" url="/pages/personal/personal">
     <image class="avatar" mode="cover" src="{{userInfo.avatarUrl}}"></image>
     <text class="nickname">{{userInfo.nickName}},欢迎来到苏梅岛！！！</text>
+    <view class='right'>
+      <van-icon name="arrow" color='#008BC7' />
+    </view>
   </navigator>
   <van-panel customClass="panel" title="预约早餐" wx:if="{{data.breakfast}}">
     <view class="main">{{data.breakfast.food}}: {{data.breakfast.time}}</view>

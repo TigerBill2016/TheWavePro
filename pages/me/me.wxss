@@ -1,30 +1,38 @@
 .panel {
-    background-color: #fff;
-    margin-bottom: 8px;
+  background-color: #fff;
+  margin-bottom: 8px;
 }
 
 .userinfo {
-    display: flex;
-    padding: 20rpx;
+  position: relative;
+  display: flex;
+  padding: 20rpx;
 }
 
 .userinfo .avatar {
-    display: block;
-    width: 160rpx;
-    height: 160rpx;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
 }
 
 .userinfo .nickname {
-    flex: 1;
-    margin-left: 20px;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.userinfo .right {
+  width: 35px;
+  font-size: 20px;
+  line-height: 160rpx;
+  text-align: right;
 }
 
 .main {
-    padding: 10px 15px;
+  padding: 10px 15px;
 }
 
 .nodata {
-    display: block;
-    text-align: center;
-    line-height: 200px;
+  display: block;
+  text-align: center;
+  line-height: 200px;
 }

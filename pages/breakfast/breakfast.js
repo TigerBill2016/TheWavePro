@@ -18,7 +18,9 @@ Page({
     preTime: void 0,
     timeData: [],
     show: !1,
-    guestid: ""
+    guestid: "",
+    price: 300,
+    person: 2,
   },
   onShow: function() {
     var t = this;
@@ -37,7 +39,8 @@ Page({
         }
       }
     }), this.setData({
-      guestid: wx.getStorageSync("guestid")
+      guestid: wx.getStorageSync("guestid"),
+      person: wx.getStorageSync("guestInfo").person
     });
   },
   fetInitData: function() {
@@ -84,6 +87,11 @@ Page({
   onSubmit: function(t) {
     var a = this,
       o = i.globalData;
+    let {
+      price,
+      person
+    } = this.data
+
     o.userInfo, o.breakfast, o.breakfastData;
     this.data.preTime ? wx.request({
       method: "POST",
@@ -91,7 +99,8 @@ Page({
       data: {
         guestid: wx.getStorageSync("guestid"),
         timeCode: this.data.preTime,
-        food: this.data.food
+        food: this.data.food,
+        total: price * person,
       },
       success: function(t) {
         200 === t.statusCode && a.setData({

@@ -70,11 +70,16 @@ Page({
           hasUserInfo: !0
         });
       }
-    }), wx.getStorageSync("guestInfo") ? this.setData({
-      show: !1
-    }) : this.setData({
-      show: !0
-    });
+    })
+    if (wx.getStorageSync("guestInfo")) {
+      this.setData({
+        show: !1
+      })
+    } else {
+      this.setData({
+        show: !0
+      })
+    }
   },
   onShow() {
     let _date = this.formatDate(new Date());
@@ -126,7 +131,6 @@ Page({
     });
   },
   getUserInfo: function(e) {
-    console.log("222", e)
     let {
       errMsg
     } = e.detail
@@ -151,8 +155,12 @@ Page({
     let {
       username,
       number,
-      person
+      person,
     } = this.data.guestInfo
+    let {
+      startDate,
+      endDate
+    } = this.data
     let session_key = wx.getStorageSync('session_key')
     let iv = wx.getStorageSync('iv')
     let encryptedData = wx.getStorageSync('encryptedData')
@@ -163,14 +171,21 @@ Page({
           iv,
           encryptedData,
           ...this.data.guestInfo,
+          startDate,
+          endDate
         })
         wx.setStorage({
           key: 'guestInfo',
-          data: this.data.guestInfo,
+          data: {
+            ...this.data.guestInfo,
+            startDate,
+            endDate
+          }
         })
         this.setData({
           show: false
         })
+        wx.showTabBar();
       } else {
         Toast('为了旅途的方便，请完善个人信息')
       }

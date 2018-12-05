@@ -1,5 +1,30 @@
 <view class="wrap">
-    <text class="info">推荐岛上的一家美食店(复制地址浏览器中打开即可)</text>
-    <text class="url" selectable="true">https://www.hangoversamui.com/</text>
-    <web-view src="https://www.hangoversamui.com/"></web-view>
+  <text class="info">点击【复制链接】按钮，复制地址浏览器中打开即可</text>
+  <view class='panel'>
+    <view class='img' style='background-color: '>
+      <image class='' src="./images/hangoverLogo.png"></image>
+    </view>
+    <view class='content'>
+      <view>您现在可以订购苏梅岛最好的食物，并把它送到您的门前！</view>
+      <van-button class='btn' type="primary" data-url="https://www.hangoversamui.com/" size="small" bind:click="copyUrl">复制链接</van-button>
+    </view>
+  </view>
+  <view class='panel'>
+    <view class='img' style='background-color: '>
+      <image class='' src="./images/kfc.jpg"></image>
+    </view>
+    <view class='content'>
+      <view>打造新快餐，提供早餐，午餐，夜宵和甜品站等丰富选择。</view>
+      <van-button class='btn' type="primary" data-url="http://www.kfc.com.cn" size="small" bind:click="copyUrl">复制链接</van-button>
+    </view>
+  </view>
+  <view class='panel'>
+    <view class='img' style='background-color: '>
+      <image class='' src="./images/m.jpg"></image>
+    </view>
+    <view class='content'>
+      <view>发现麦当劳的经典汉堡、当期新品、优惠活动和最新优惠券。</view>
+      <van-button class='btn' type="primary" data-url="https://www.mcdonalds.com.cn/" size="small" bind:click="copyUrl">复制链接</van-button>
+    </view>
+  </view>
 </view>
