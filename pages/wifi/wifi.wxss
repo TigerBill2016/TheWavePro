@@ -1,0 +1,4 @@
+/* pages/wifi/wifi.wxss */
+.group {
+  margin-bottom: 10px;
+}

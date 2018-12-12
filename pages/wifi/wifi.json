@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "WIFI密码",
+  "usingComponents": {
+    "van-notice-bar": "/component/vant-weapp/dist/notice-bar/index",
+    "van-cell": "/component/vant-weapp/dist/cell/index",
+    "van-cell-group": "/component/vant-weapp/dist/cell-group/index",
+    "van-panel": "/component/vant-weapp/dist/panel/index"
+  }
+}

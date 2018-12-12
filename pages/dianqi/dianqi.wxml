@@ -1,0 +1,8 @@
+<!--pages/dianqi/dianqi.wxml-->
+<view>
+  <text>微波炉</text>
+  <image aspectFit src="./images/1.jpg"></image>
+  <image aspectFit src="./images/2.jpg"></image>
+  <text>灶台（电磁炉）</text>
+  <image aspectFit src="./images/3.jpg"></image>
+</view>

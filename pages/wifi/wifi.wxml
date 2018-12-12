@@ -1,0 +1,32 @@
+<!--pages/wifi/wifi.wxml-->
+<view>
+  <van-notice-bar scrollable="false" text="每一栋别墅都有单独的WiFi信号源，WiFi名称是别墅编号（如：Villa A5或Villa A5_5G）" />
+  <van-cell-group custom-class="group">
+    <van-cell title="别墅" value="A1 A2 A3 A5 A6 B1 B2" />
+    <van-cell title="密码" value="0625780042" border="{{ false }}" />
+  </van-cell-group>
+  <van-cell-group custom-class="group">
+    <van-cell title="别墅" value="B5 B6 B7 B8 A8 A9" />
+    <van-cell title="密码" value="777888999" border="{{ false }}" />
+  </van-cell-group>
+  <van-cell-group custom-class="group">
+    <van-cell title="别墅" value="A10" />
+    <van-cell title="密码" value="10101010" border="{{ false }}" />
+  </van-cell-group>
+  <van-cell-group custom-class="group">
+    <van-cell title="别墅" value="A12" />
+    <van-cell title="密码" value="12121212" border="{{ false }}" />
+  </van-cell-group>
+  <van-cell-group custom-class="group">
+    <van-cell title="别墅" value="A11 B11" />
+    <van-cell title="密码" value="11111111" border="{{ false }}" />
+  </van-cell-group>
+  <van-cell-group custom-class="group">
+    <van-cell title="别墅" value="B12 B17" />
+    <van-cell title="密码" value="999888777" border="{{ false }}" />
+  </van-cell-group>
+  <van-cell-group custom-class="group">
+    <van-cell title="别墅" value="B16" />
+    <van-cell title="密码" value="16161616" border="{{ false }}" />
+  </van-cell-group>
+</view>

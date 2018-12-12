@@ -11,7 +11,10 @@
     "pages/guidehome/guidehome",
     "pages/guide-en/guide-en",
     "pages/guide-cn/guide-cn",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/wifi/wifi",
+    "pages/xiaomi/xiaomi",
+    "pages/dianqi/dianqi"
   ],
   "window": {
     "backgroundTextStyle": "black",
