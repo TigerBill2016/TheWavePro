@@ -15,6 +15,7 @@
           <=0? '(已约满)': ''}} </view>
         </view>
       </view>
+      <van-field label="用餐人数" value="{{ person }}" required type="number" border="{{ false }}" input-align="right" bind:change="onPersonChange" />
       <view class="tips">{{price}}泰铢/人，总价{{price*person}}泰铢</view>
       <button bindtap="onSubmit" class="submit" type="primary" wx:if="{{!issubscribe}}">立即预约</button>
       <van-toast id="van-toast"></van-toast>

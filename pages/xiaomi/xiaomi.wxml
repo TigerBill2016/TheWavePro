@@ -1,15 +1,23 @@
 <!--pages/xiaomi/xiaomi.wxml-->
-<view>
-  <text>步骤：开启电视电源——按遥控器SOURCE键或有切换信号源标识的按键切换至小米信号源（HDMI 2或HDMI3）——拿小米遥控器开启小米盒子——按主页键即出现小米网络电视首页界面
-（各别墅的电视品牌不同，遥控器的样式有所区别，切换信号源的按键不同。
-</text>
-  <image aspectFit src="./images/1.jpg"></image>
-  <image aspectFit src="./images/2.jpg"></image>
-  <image aspectFit src="./images/3.jpg"></image>
-  <image aspectFit src="./images/4.jpg"></image>
-  <image aspectFit src="./images/5.jpg"></image>
-  <text>小米投屏：在首页进入“我的应用”——点击“无线投屏”——进入投屏界面，在确保手机和电视都在同一个WiFi环境下，手机连接“客厅小米盒子”即可。</text>
-  <image aspectFit src="./images/a1.jpg"></image>
-  <image aspectFit src="./images/a2.jpg"></image>
-  <image aspectFit src="./images/a3.jpg"></image>
+<view class='wrap'>
+  <text class='p'>1）开启电视电源</text>
+  <text class='p'>2）按遥控器SOURCE键或有切换信号源标识的按键切换至小米信号源（HDMI 2或HDMI3）</text>
+  <text class='p'>3）拿小米遥控器开启小米盒子</text>
+  <text class='p'>4）按主页键即出现小米网络电视首页界面（各别墅的电视品牌不同，遥控器的样式有所区别，切换信号源的按键不同）</text>
+  <text class='p'></text>
+  <text class='p'></text>
+  <text class='p'></text>
+  <text class='p'></text>
+  <image mode="widthFix" src="./images/1.jpg"></image>
+  <image mode="widthFix" src="./images/2.jpg"></image>
+  <image mode="widthFix" src="./images/3.jpg"></image>
+  <image mode="widthFix" src="./images/4.jpg"></image>
+  <image mode="widthFix" src="./images/5.jpg"></image>
+  <text class='p'>小米投屏：</text>
+  <text class='p'>1）在首页进入“我的应用”</text>
+  <text class='p'>2）点击“无线投屏”</text>
+  <text class='p'>3）进入投屏界面，在确保手机和电视都在同一个WiFi环境下，手机连接“客厅小米盒子”即可</text>
+  <image mode="widthFix" src="./images/a1.jpg"></image>
+  <image mode="widthFix" src="./images/a2.jpg"></image>
+  <image mode="widthFix" src="./images/a3.jpg"></image>
 </view>

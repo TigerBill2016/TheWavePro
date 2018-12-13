@@ -1,1 +1,18 @@
 /* pages/dianqi/dianqi.wxss */
+
+.wrap {
+  padding: 20rpx;
+  font-size: 14px;
+}
+
+.p {
+  display: block;
+  margin-bottom: 8px;
+}
+
+image {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  margin-bottom: 20rpx;
+}

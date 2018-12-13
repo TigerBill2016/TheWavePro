@@ -1,6 +1,6 @@
 <view class="wrap">
   <van-cell-group>
-    <van-cell isLink arrowDirection="down" title="别墅入住须知(英文)" url="/pages/guide-en/guide-en"></van-cell>
+    <van-cell isLink arrowDirection="down" title="Instructions for admission(English)" url="/pages/guide-en/guide-en"></van-cell>
     <van-cell isLink arrowDirection="down" title="别墅入住须知(中文)" url="/pages/guide-cn/guide-cn"></van-cell>
     <van-cell isLink arrowDirection="down" title="交通指引" url="/pages/guide/guide"></van-cell>
     <van-cell isLink arrowDirection="down" title="别墅WiFi密码" url="/pages/wifi/wifi"></van-cell>

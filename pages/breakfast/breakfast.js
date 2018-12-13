@@ -39,8 +39,7 @@ Page({
         }
       }
     }), this.setData({
-      guestid: wx.getStorageSync("guestid"),
-      person: wx.getStorageSync("guestInfo").person
+      guestid: wx.getStorageSync("guestid")
     });
   },
   fetInitData: function() {
@@ -88,12 +87,19 @@ Page({
     var a = this,
       o = i.globalData;
     let {
+      preTime,
       price,
       person
     } = this.data
-
-    o.userInfo, o.breakfast, o.breakfastData;
-    this.data.preTime ? wx.request({
+    if (!preTime) {
+      Toast("请选择用餐时间");
+      return
+    }
+    if (!person) {
+      Toast("请选择用餐人数");
+      return
+    }
+    wx.request({
       method: "POST",
       url: s.HOST + "/breakfast/subscribe",
       data: {
@@ -110,12 +116,17 @@ Page({
       fail: function(t) {
         console.log("err", t);
       }
-    }) : Toast("请选择用餐时间");
+    })
   },
   onModalClose: function() {
     wx.navigateBack({
       delta: 1
     });
+  },
+  onPersonChange(e) {
+    this.setData({
+      person: e.detail
+    })
   },
   onCancel: function() {
     var t = this;

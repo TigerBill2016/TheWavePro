@@ -1,4 +1,14 @@
 /* pages/wifi/wifi.wxss */
+
 .group {
   margin-bottom: 10px;
+}
+
+.tips {
+  display: block;
+  font-size: 14px;
+  color: #ed6a0c;
+  padding: 0 8px;
+  margin-bottom: 8px;
+  background-color: #fffbe8;
 }
