@@ -3,8 +3,8 @@
   <view class="wrap">
     <view class="food">
       <view bindtap="selectTap1" class="select-group">
-        <view class="{{food==='中餐'?'item active':'item'}}" data-value="中餐">中餐</view>
-        <view class="{{food==='西餐'?'item active':'item'}}" data-value="西餐">西餐</view>
+        <view class="{{food==='chinese'?'item active':'item'}}" data-value="chinese">中餐</view>
+        <view class="{{food==='western'?'item active':'item'}}" data-value="western">西餐</view>
       </view>
     </view>
     <view class="time">

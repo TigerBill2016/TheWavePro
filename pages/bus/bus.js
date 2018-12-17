@@ -15,7 +15,7 @@ Page({
     runsData: [],
     destination: "market",
     time: "",
-    member: 1,
+    member: wx.getStorageSync("guestInfo").person,
     price: 50
   },
   onShow() {
@@ -113,10 +113,11 @@ Page({
       url: e.HOST + "/busrun/subscribe",
       data: {
         destination: n,
-        member: r,
+        pax: r,
         time: s,
         price: u,
-        guestid: wx.getStorageSync("guestid")
+        guestid: wx.getStorageSync("guestid"),
+        roomNum: wx.getStorageSync("guestInfo").number,
       },
       success: function(response) {
         if (response.statusCode === 200) {

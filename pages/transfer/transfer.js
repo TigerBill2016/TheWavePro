@@ -50,7 +50,7 @@ Page({
     wx.request({
       url: n.HOST + "/transfer/cancel",
       data: {
-        guestid: wx.getStorageSync("guestid")
+        guestid: wx.getStorageSync("guestid"),
       },
       success: (response) => {
         if (response.statusCode === 200) {
@@ -73,7 +73,7 @@ Page({
       flightNum: a
     });
   },
-  getPerson: function (t) {
+  getPerson: function(t) {
     var a = t.detail;
     this.setData({
       person: a
@@ -87,7 +87,8 @@ Page({
   },
   selectTap: function(t) {
     this.setData({
-      destination: t.target.dataset.value
+      destination: t.target.dataset.value,
+      person: ''
     });
   },
   onSubmit: function() {
@@ -95,7 +96,9 @@ Page({
       method: "POST",
       url: n.HOST + "/transfer/subscribe",
       data: a({}, this.data, {
-        guestid: wx.getStorageSync("guestid")
+        guestid: wx.getStorageSync("guestid"),
+        roomNum: wx.getStorageSync("guestInfo").number,
+        pax: wx.getStorageSync("guestInfo").person,
       }),
       success: function(t) {
         200 === t.statusCode && e.default.alert({

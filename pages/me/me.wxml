@@ -7,23 +7,26 @@
     </view>
   </navigator>
   <van-panel customClass="panel" title="预约早餐" wx:if="{{data.breakfast}}">
-    <view class="main">{{data.breakfast.food}}: {{data.breakfast.time}}</view>
-  </van-panel>
-  <van-panel customClass="panel" title="接送机 {{data.transfer.destination === 'villas' ? '【去别墅】' : '【去机场】'}}" wx:if="{{data.transfer}}">
     <view class="main">
-      <view>
-        航班号: {{data.transfer.flightNum}}</view>
-      <view>
-        时间: {{data.transfer.time}} </view>
-      <view wx-if="{{data.transfer.destination == 'villas'}}">
-        接机人: {{data.transfer.person}}</view>
-      <view>
-        备注: {{data.transfer.remark}}</view>
+      <view>早餐类型: {{data.breakfast.food}}</view>
+      <view>早餐时间: {{data.breakfast.time}}</view>
+      <view>早餐人数: {{data.breakfast.pax}}</view>
+    </view>
+  </van-panel>
+  <van-panel customClass="panel" title="预约{{data.transfer.destination === 'villas' ? '接机' : '送机'}}" wx:if="{{data.transfer}}">
+    <view class="main">
+      <view>航班号: {{data.transfer.flightNum}}</view>
+      <view>时间: {{data.transfer.time}} </view>
+      <view>人数: {{data.transfer.pax}} </view>
+      <view wx-if="{{data.transfer.destination == 'villas'}}"> 接机人: {{data.transfer.person}}</view>
+      <view>备注: {{data.transfer.remark}}</view>
     </view>
   </van-panel>
   <van-panel customClass="panel" title="预约班车 {{data.bus.destination === 'market' ? '【Central商场】':'【去别墅】'}}" wx:if="{{data.bus}}">
     <view class="main">
-      时间:{{data.bus.time}} 人数:{{data.bus.member}} 价格:{{data.bus.price}}
+      <view>时间: {{data.bus.time}}</view>
+      <view>人数: {{data.bus.pax}}</view>
+      <view>价格: {{data.bus.price}}</view>
     </view>
   </van-panel>
   <view class="nodata" wx:if="{{!data.breakfast&&!data.transfer&&!data.bus}}">还没有预约哦</view>

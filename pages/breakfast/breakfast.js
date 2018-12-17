@@ -14,7 +14,7 @@ Page({
   data: {
     issubscribe: !1,
     url: "../../public/cn-food.jpg",
-    food: "中餐",
+    food: "chinese",
     preTime: void 0,
     timeData: [],
     show: !1,
@@ -104,8 +104,10 @@ Page({
       url: s.HOST + "/breakfast/subscribe",
       data: {
         guestid: wx.getStorageSync("guestid"),
+        roomNum: wx.getStorageSync("guestInfo").number,
         timeCode: this.data.preTime,
         food: this.data.food,
+        pax: person,
         total: price * person,
       },
       success: function(t) {
@@ -131,10 +133,9 @@ Page({
   onCancel: function() {
     var t = this;
     wx.request({
-      method: "post",
       url: s.HOST + "/breakfast/cancel",
       data: {
-        guestid: this.data.guestid
+        guestid: wx.getStorageSync("guestid")
       },
       success: function(e) {
         200 === e.statusCode && (t.fetInitData(), t.fetchSubscribe());
