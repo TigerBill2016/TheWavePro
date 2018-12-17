@@ -11,7 +11,14 @@
   </van-panel>
   <van-panel customClass="panel" title="接送机 {{data.transfer.destination === 'villas' ? '【去别墅】' : '【去机场】'}}" wx:if="{{data.transfer}}">
     <view class="main">
-      航班号:{{data.transfer.flightNum}} 时间:{{data.transfer.time}} 备注:{{data.transfer.remark}}
+      <view>
+        航班号: {{data.transfer.flightNum}}</view>
+      <view>
+        时间: {{data.transfer.time}} </view>
+      <view wx-if="{{data.transfer.destination == 'villas'}}">
+        接机人: {{data.transfer.person}}</view>
+      <view>
+        备注: {{data.transfer.remark}}</view>
     </view>
   </van-panel>
   <van-panel customClass="panel" title="预约班车 {{data.bus.destination === 'market' ? '【Central商场】':'【去别墅】'}}" wx:if="{{data.bus}}">

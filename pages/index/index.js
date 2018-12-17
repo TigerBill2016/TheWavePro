@@ -80,6 +80,24 @@ Page({
         show: !0
       })
     }
+
+
+    // let task = wx.connectSocket({
+    //   url: 'ws://localhost:8080/',
+    //   data: "minipro",
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   protocols: ['protocol1'],
+    //   method: 'GET',
+    //   success(res) {
+    //     console.log('websocket', res)
+    //   }
+    // })
+
+    // task.onMessage(function(res){
+    //   console.log('res', res)
+    // })
   },
   onShow() {
     let _date = this.formatDate(new Date());
@@ -208,5 +226,8 @@ Page({
         }
       }
     });
+  },
+  getFormID: function(e) {
+    console.log('111111', e.detail)
   }
 });
